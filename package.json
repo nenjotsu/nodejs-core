@@ -1,6 +1,6 @@
 {
-  "name": "nodejs-core",
-  "version": "1.0.1",
+  "name": "@nenjotsu/nodejs-core",
+  "version": "1.0.4",
   "description": "NodeJS Core API",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "build": "babel src -d ./dist --ignore '**/**/*.test.js'",
     "test": "./node_modules/.bin/jest",
     "test:watch": "npm test -- --watch",
-    "release": "./node_modules/.bin/np"
+    "release": "./node_modules/.bin/np",
+    "deploy": "npm publish --access=public"
   },
   "babel": {
     "presets": [
