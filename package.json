@@ -1,0 +1,43 @@
+{
+  "name": "nodejs-core",
+  "version": "1.0.0",
+  "description": "NodeJS Core API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "watch 'npm run test' src",
+    "build:minify": "./node_modules/.bin/babel-minify ./dist/index.js --mangle.keepClassName --deadcode.keepFnArgs --out-file ./min/index.js",
+    "build": "babel src -d ./dist --ignore '**/**/*.test.js'",
+    "test": "./node_modules/.bin/jest",
+    "test:watch": "npm test -- --watch",
+    "release": "./node_modules/.bin/np"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ubidy/Ubidy_JavascriptLibrary.git"
+  },
+  "keywords": [
+    "ubidy",
+    "helpers",
+    "utils"
+  ],
+  "author": "nenjotsu && ubidy dev team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ubidy/Ubidy_JavascriptLibrary/issues"
+  },
+  "homepage": "https://github.com/Ubidy/Ubidy_JavascriptLibrary#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-minify": "^0.5.0",
+    "babel-preset-latest": "^6.24.1",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.4",
+    "np": "^2.20.1",
+    "watch": "^1.0.2"
+  }
+}
