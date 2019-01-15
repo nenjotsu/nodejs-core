@@ -1,5 +1,5 @@
-import crypto from './crypto';
+import config from './const/config';
 
 export default {
-  crypto,
+  config,
 };

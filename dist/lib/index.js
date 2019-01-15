@@ -4,12 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _crypto = require('./crypto');
+var _config = require('./const/config');
 
-var _crypto2 = _interopRequireDefault(_crypto);
+var _config2 = _interopRequireDefault(_config);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  crypto: _crypto2.default
+  config: _config2.default
 };
