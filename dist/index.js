@@ -4,12 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _lib = require('./lib');
+var _constant = require('./constant');
 
-var _lib2 = _interopRequireDefault(_lib);
+var _constant2 = _interopRequireDefault(_constant);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  lib: _lib2.default
+  constant: _constant2.default
 };

@@ -1,5 +1,5 @@
-import lib from './lib';
+import constant from './constant';
 
 export default {
-  lib,
+  constant,
 };

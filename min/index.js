@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var _lib=require("./lib"),_lib2=_interopRequireDefault(_lib);function _interopRequireDefault(a){return a&&a.__esModule?a:{default:a}}exports.default={lib:_lib2.default};
