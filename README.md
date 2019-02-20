@@ -1,23 +1,21 @@
-# Ubidy_NodeCore
-
-Nodejs API Core
+# NodeCore
 
 ## Clone the project
 
 ```bash
-$ git clone https://github.com/Ubidy/Ubidy_NodeCore.git
+$ git clone https://github.com/nenjotsu/nodejs-core.git
 ```
 
 ## Installation
 
 ```bash
-$ npm install @ubidy_devs/node-core --save
+$ npm install @nenjotsu/nodejs-core --save
 ```
 
 or
 
 ```bash
-$ yarn add @ubidy_devs/node-core
+$ yarn add @nenjotsu/nodejs-core
 ```
 
 ## Upgrade from Node API (usage)
@@ -32,15 +30,15 @@ $ yarn upgrade-interactive
 
 ### Step 2
 
-Select @ubidy_devs/node-core (using space bar) and click enter in windows or return in mac
+Select @nenjotsu/nodejs-core (using space bar) and click enter in windows or return in mac
 
 OR
 
 ```bash
-$ npm update @ubidy_devs/node-core@<SPECIFIC VERSION e.g. 1.2.3>
+$ npm update @nenjotsu/nodejs-core@<SPECIFIC VERSION e.g. 1.2.3>
 ```
 
-[Check the latest version](https://github.com/Ubidy/Ubidy_NodeCore/releases)
+[Check the latest version](https://github.com/nenjotsu/nodejs-core/releases)
 
 ## Run in Development
 
@@ -69,7 +67,7 @@ $ npm run build
 
 ### Step 3 - Create a Pull Request
 
-[Create](https://github.com/Ubidy/Ubidy_NodeCore/compare) a pull requests from `your branch` to `master branch`
+[Create](https://github.com/nenjotsu/nodejs-core/compare) a pull requests from `your branch` to `master branch`
 
 ### Step 4 - Publish a release using np
 
@@ -84,7 +82,7 @@ $ npm run release
 ## Change Log
 
 This project adheres to [Semantic Versioning](http://semver.org/).  
-Every release, along with the migration instructions, is documented on the Github [Releases](https://github.com/Ubidy/Ubidy_NodeCore/releases) page.
+Every release, along with the migration instructions, is documented on the Github [Releases](https://github.com/nenjotsu/nodejs-core/releases) page.
 
 ## How to generate release notes
 
@@ -96,7 +94,7 @@ $ version=1.0.28 npm run release:notes
 
 ## Want to contribute?
 
-[Submit an issue](https://github.com/Ubidy/Ubidy_NodeCore/issues/new)
+[Submit an issue](https://github.com/nenjotsu/nodejs-core/issues/new)
 
 ## License
 

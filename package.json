@@ -11,7 +11,7 @@
     "build:wp": "webpack --config ./config/webpack.config.js",
     "test": "mocha --require babel-register --require babel-polyfill --require jsdom-global/register tests/**/**/*.test.js",
     "test:watch": "npm test -- --watch",
-    "release:notes": "./node_modules/.bin/git-release-notes v$version markdown > changelog.md",
+    "release:notes": "./node_modules/.bin/git-release-notes v$version markdown > CHANGELOG.md",
     "release": "./node_modules/.bin/np"
   },
   "babel": {
