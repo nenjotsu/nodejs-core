@@ -1,0 +1,1 @@
+{"version":3,"file":"uncaughtException.js","sourceRoot":"","sources":["../../../src/infrastructure/webserver/plugins/uncaughtException.ts"],"names":[],"mappings":";;AAAA,mBAAe,UAAC,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE,IAAI;IAEjC,OAAO,CAAC,GAAG,CAAC,UAAU,EAAE,GAAG,CAAC,CAAC;IAE7B,IAAI,CAAC,GAAG,CAAC,CAAC;AACZ,CAAC,EAAC"}

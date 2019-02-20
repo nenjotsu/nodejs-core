@@ -4,41 +4,73 @@
   "description": "NodeJS Core API",
   "main": "index.js",
   "scripts": {
-    "dev": "watch 'npm run test' src",
-    "build:minify": "./node_modules/.bin/babel-minify ./dist/index.js --mangle.keepClassName --deadcode.keepFnArgs --out-file ./min/index.js",
-    "build": "babel src -d ./dist --ignore '**/**/*.test.js'",
-    "test": "./node_modules/.bin/jest",
+    "dev": "tsc -w",
+    "build": "npm run clean && tsc",
+    "clean": "node clean.js",
+    "build:min": "npm run build && npm run build:wp",
+    "build:wp": "webpack --config ./config/webpack.config.js",
+    "test": "mocha --require babel-register --require babel-polyfill --require jsdom-global/register tests/**/**/*.test.js",
     "test:watch": "npm test -- --watch",
-    "release": "./node_modules/.bin/np",
-    "deploy": "npm publish --access=public"
+    "release:notes": "./node_modules/.bin/git-release-notes v$version markdown > changelog.md",
+    "release": "./node_modules/.bin/np"
   },
   "babel": {
     "presets": [
-      "latest"
+      "env"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ubidy/Ubidy_JavascriptLibrary.git"
+    "url": "git+https://github.com/nenjotsu/nodejs-core.git"
   },
   "keywords": [
-    "ubidy",
     "helpers",
-    "utils"
+    "utils",
+    "node core"
   ],
-  "author": "nenjotsu && ubidy dev team",
+  "author": "nenjotsu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ubidy/Ubidy_JavascriptLibrary/issues"
+    "url": "https://github.com/nenjotsu/nodejs-core/issues"
   },
-  "homepage": "https://github.com/Ubidy/Ubidy_JavascriptLibrary#readme",
+  "homepage": "https://github.com/nenjotsu/nodejs-core#readme",
+  "dependencies": {
+    "express-jwt": "^5.3.0",
+    "jwks-rsa": "^1.2.0",
+    "restify": "^7.6.0",
+    "restify-cors-middleware": "^1.1.1",
+    "restify-errors": "^6.1.1"
+  },
   "devDependencies": {
+    "@types/jsonwebtoken": "^8.3.0",
+    "@types/node": "^10.5.7",
     "babel-cli": "^6.26.0",
-    "babel-minify": "^0.5.0",
-    "babel-preset-latest": "^6.24.1",
-    "jest": "^22.4.3",
-    "jest-cli": "^22.4.4",
-    "np": "^2.20.1",
-    "watch": "^1.0.2"
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "expect": "^23.6.0",
+    "fs": "0.0.1-security",
+    "ghooks": "^2.0.4",
+    "git-release-notes": "^4.0.0",
+    "jsdom": "13.1.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "np": "^3.1.0",
+    "path": "^0.12.7",
+    "rimraf": "^2.6.3",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^7.0.1",
+    "tslib": "^1.9.3",
+    "typescript": "^3.2.2",
+    "watch": "^1.0.2",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
   }
 }
