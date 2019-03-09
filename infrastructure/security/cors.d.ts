@@ -1,7 +1,7 @@
 declare const _default: {
+    preflightMaxAge: number;
     origins: string[];
-    credentials: boolean;
     methods: string[];
-    headers: string[];
+    allowHeaders: string[];
 };
 export default _default;

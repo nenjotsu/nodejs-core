@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var jwtCheck_1 = require("../../infrastructure/security/jwtCheck");
 function setRoutes(server, controller, controllerBasePath) {
     var _loop_1 = function (member) {
         var routeProps = controller[member].routeProperties;
@@ -10,8 +9,8 @@ function setRoutes(server, controller, controllerBasePath) {
             if (routeProps.path) {
                 path = "" + controllerBasePath + routeProps.path;
             }
-            console.log(routeProps.httpVerb, path, '\x1b[36m');
-            server[routeProps.httpVerb](path, jwtCheck_1.default, callBack);
+            console.log(routeProps.httpVerb, path, "\x1b[36m");
+            server[routeProps.httpVerb](path, callBack);
         }
     };
     for (var member in controller) {

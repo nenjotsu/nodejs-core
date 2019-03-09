@@ -1,4 +1,4 @@
-import jwtCheck from '../../infrastructure/security/jwtCheck';
+// import jwtCheck from '../../infrastructure/security/jwtCheck';
 
 export function setRoutes(server, controller, controllerBasePath) {
   for (let member in controller) {
@@ -11,8 +11,9 @@ export function setRoutes(server, controller, controllerBasePath) {
       if (routeProps.path) {
         path = `${controllerBasePath}${routeProps.path}`;
       }
-      console.log(routeProps.httpVerb, path, '\x1b[36m');
-      server[routeProps.httpVerb](path, jwtCheck, callBack);
+      console.log(routeProps.httpVerb, path, "\x1b[36m");
+      // server[routeProps.httpVerb](path, jwtCheck, callBack);
+      server[routeProps.httpVerb](path, callBack);
     }
   }
 }
