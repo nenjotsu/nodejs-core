@@ -55,7 +55,7 @@
     "fs": "0.0.1-security",
     "ghooks": "^2.0.4",
     "git-release-notes": "^4.0.0",
-    "jsdom": "13.1.0",
+    "jsdom": "16.5.0",
     "jsdom-global": "3.0.2",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9",
